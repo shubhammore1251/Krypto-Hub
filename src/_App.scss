@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap");
+
+:root {
+  --text-primary: #000;
+  --bgPrimary: #fff;
+  --bgSecondary: #f9f9f9;
+  --border: #d9d9d9;
+  --theme-color: #431d69;
+  --seleted--menu: #9554d5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  display: flex;
+  overflow: hidden;
+
+  &-navbar {
+    flex: 0.2;
+  }
+
+  &-mainbdy {
+    flex: 0.9;
+    width: 100%;
+
+    .routes {
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: var(--theme-color);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      font-size: 18px;
+      margin-left: -5px;
+
+      a {
+        color: var(--bgPrimary);
+      }
+
+      h5 {
+        @extend a;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+/*Nav-bar*/
+
+.navcont {
+  position: fixed;
+  left: 0;
+  // margin: 10px;
+  height: 120vh;
+  margin: 0px;
+  background-color: var(--theme-color);
+  width: 18vw;
+
+  .ant-menu {
+    background-color: var(--theme-color) !important;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .ant-menu-item-selected {
+    background-color: var(--seleted--menu) !important;
+  }
+
+  &-logocont {
+    background-color: var(--theme-color);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    width: 100%;
+
+    .userimg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .logo {
+      margin: 0 0 0 5px;
+      font-size: 26px;
+
+      a {
+        color: var(--bgPrimary);
+      }
+
+      a:hover {
+        color: var(--border);
+      }
+    }
+
+    .menu-control-container {
+      display: none !important;
+      position: absolute !important;
+      right: 10px !important;
+      top: 25px !important;
+      font-size: 1.2rem !important;
+      background-color: var(--bgSecondary) !important;
+      border: none !important;
+    }
+  }
+}
+
+/*Homepage*/
+
+.heading-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+
+  h2 {
+    color: var(--theme-color) !important;
+    font-weight: 700 !important;
+  }
+
+  &-showmore {
+    margin-top: 0px !important;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--bgPrimary) !important;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: var(--theme-color);
+  }
+}
+
+/*CryptoCurrencies*/
+
+.crypcard-cont {
+  min-height: 65vh !important;
+
+  &-card {
+    min-width: 250px;
+
+    .cryptoimg {
+      width: 35px;
+    }
+  }
+}
+
+.search-coins {
+  margin: 20px auto 30px auto;
+  width: 250px;
+}
+
+/*News*/
+
+.news-select {
+  width: 180px;
+  margin-bottom: 20px !important;
+}
+
+.news-card {
+  min-height: 300px !important;
+
+  &-imgcont {
+    display: flex !important;
+    justify-content: space-between !important;
+
+    .news-title {
+      width: 70%;
+      font-size: 18px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  p {
+    color: var(--text-primary);
+    margin: 10px 0px !important;
+  }
+
+  &-provider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px !important;
+
+    .provider-name {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+/*CryptoDetails*/
+
+.coin-detailcont {
+  margin: 30px;
+
+  &-headingcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+
+    .coin-name {
+      font-weight: 900;
+      color: var(--theme-color);
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-select-timeperiod {
+    width: 200px !important;
+    margin-top: 20px !important;
+  }
+
+  &-statscont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .coin-stats {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+      opacity: 0.9;
+      padding: 20px;
+      cursor: pointer;
+
+      &-name {
+        display: flex;
+        gap: 10px;
+        font-size: 1rem;
+        margin-right: 50px;
+      }
+
+      &-value {
+        font-weight: 800;
+      }
+    }
+
+    .coin-stats:hover {
+      background-color: var(--bgSecondary);
+    }
+  }
+
+  &-coindesclink {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
+
+    .coin-desc {
+      flex: 0.5;
+
+      h3 {
+        font-weight: 700;
+        color: var(--theme-color);
+      }
+
+      p {
+        font-size: 1rem;
+        opacity: 0.9;
+        text-align: justify;
+      }
+
+      a {
+        color: var(--seleted--menu);
+      }
+    }
+
+    .coin-links {
+      padding: 0px 20px;
+      flex: 0.5;
+
+      .coin-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border);
+        padding: 20px;
+        cursor: pointer;
+
+        .link-name {
+          text-transform: capitalize;
+          font-size: 1rem;
+        }
+
+        a {
+          color: var(--theme-color);
+          font-weight: 700;
+          font-size: 1rem;
+        }
+      }
+
+      .coin-link:hover {
+        background-color: var(--bgSecondary);
+      }
+    }
+  }
+}
+
+///Commmon used class in Crypto Details component
+.coin-details-heading {
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--theme-color) !important;
+}
+
+/*LineChart*/
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 30px;
+
+  &-title {
+    color: var(--theme-color) !important;
+  }
+
+  &-price-cont {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+
+    .price-change {
+      font-weight: 900 !important;
+    }
+
+    .current-price {
+      margin-top: 0px !important;
+      font-weight: 900 !important;
+    }
+  }
+}
+
+/*Media Queries*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+
+    &-navbar {
+      flex: 1;
+    }
+
+    &-mainbdy {
+      flex: 1;
+      margin-top: 80px;
+      margin-left: 0px;
+      margin-right: 10px;
+    }
+  }
+
+
+
+  .navcont {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    z-index: 999;
+
+    .ant-menu {
+      font-size: 18px;
+      font-weight: bold;
+      height: 25vh;
+    }
+
+    &-logocont {
+
+        
+      .menu-control-container {
+        display: block !important;
+        position: absolute !important;
+        right: 25px !important;
+        top: 25px !important;
+        font-size: 1.4rem !important;
+        background-color: var(--bgPrimary) !important;
+        color: var(--theme-color);
+        border: none !important;
+        height: 40px;
+      }
+
+    }
+  }
+
+
+
+  .heading-cont {
+   
+    h2 {
+      font-size: 18px !important;
+    }
+  
+    &-showmore {
+       margin-right: 1px;
+       display: flex;
+    }
+  
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px;
+      width: 85px;
+      height: 35px;
+      margin-bottom: 1px;
+    }
+  }
+
+
+  .coin-detailcont {
+    
+    &-headingcont {
+      
+      .coin-name {
+        font-size: 25px;
+      }
+
+      p{
+        font-size: 16px;
+      }
+  
+    }
+  
+    &-statscont {
+
+      flex-direction: column;
+      
+    
+      .coin-stats {
+        font-size: 15px;
+        padding: 10px;
+    
+      }
+  
+    }
+  
+    &-coindesclink {
+      
+        flex-direction: column;
+  
+    }
+
+    .coin-links {
+        padding: 0px 1px;
+        flex: 0.6;
+  
+        .coin-link {
+        
+          padding: 10px;
+        
+          .link-name {
+            font-size: 1rem;
+          }
+  
+          a {
+            
+            font-weight: 800;
+            font-size: 0.8rem;
+          }
+        }
+
+      }
+  }
+
+
+  .chart{
+    height: 200px !important;
+    width: 420px !important;
+    margin-left: -80px;
+    padding: 33px;
+  } 
+  
+}
+
+
+
+@media (min-width: 481px) and (max-width:1180px) {
+   
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+
+    &-navbar {
+      flex: 1;
+    }
+
+    &-mainbdy {
+      flex: 1;
+      margin-top: 80px;
+      margin-left: 0px;
+      margin-right: 10px;
+    }
+  }
+
+  .navcont {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    z-index: 999;
+    
+    .ant-menu {
+      font-size: 18px;
+      font-weight: bold;
+      height: 18vh;
+
+      a{
+        font-size: 1.5rem;
+      }
+    }
+
+    
+
+    &-logocont {
+  
+      .menu-control-container {
+        display: block !important;
+        position: absolute !important;
+        right: 25px !important;
+        top: 25px !important;
+        font-size: 1.4rem !important;
+        background-color: var(--bgPrimary) !important;
+        color: var(--theme-color);
+        border: none !important;
+        height: 40px;
+      }
+
+    }
+  }
+
+  .search-coins {
+    width: 400px;
+  }
+}
