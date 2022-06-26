@@ -1,5 +1,3 @@
-![Logo](https://static.vecteezy.com/system/resources/previews/006/181/889/original/crypto-currency-icons-background-digital-money-exchange-of-blockchain-technology-banner-cryptocurrency-mining-and-financial-concept-vector.jpg)
-
 # Krypto Hub Using Rapid API and Redux ToolKit
 
 Hosted App Link: <https://kryptohub.netlify.app/>
