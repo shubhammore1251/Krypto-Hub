@@ -1,5 +1,7 @@
 # Krypto Hub Using Rapid API and Redux ToolKit
 
+![Logo](./src/images/crypto.png)
+
 Hosted App Link: <https://kryptohub.netlify.app/>
 
 ## Acknowledgements
